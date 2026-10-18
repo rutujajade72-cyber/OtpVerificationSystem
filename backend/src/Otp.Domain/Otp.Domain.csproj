@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Plain C# only: no package or project references, so the business rules stay framework-free. -->
+
+</Project>

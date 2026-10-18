@@ -1,0 +1,28 @@
+@host = http://localhost:5080
+
+### Generate a one-time password (valid for 30 seconds)
+POST {{host}}/api/otp/generate
+Content-Type: application/json
+
+{
+  "userId": "john.doe",
+  "dateTime": "2026-10-16T12:30:00.000Z"
+}
+
+### Validate a one-time password (replace the code with the one returned above)
+POST {{host}}/api/otp/validate
+Content-Type: application/json
+
+{
+  "userId": "john.doe",
+  "code": "123456"
+}
+
+### Validation error: missing user id (400)
+POST {{host}}/api/otp/generate
+Content-Type: application/json
+
+{
+  "userId": "",
+  "dateTime": "2026-10-16T12:30:00.000Z"
+}

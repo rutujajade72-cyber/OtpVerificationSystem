@@ -1,0 +1,23 @@
+# .NET
+bin/
+obj/
+TestResults/
+coverage/
+*.user
+*.suo
+.vs/
+.idea/
+
+# Node / frontend
+node_modules/
+dist/
+*.tsbuildinfo
+.env
+.env.local
+.env.*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
